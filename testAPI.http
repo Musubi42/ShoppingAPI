@@ -1,0 +1,34 @@
+### Register 
+POST http://localhost:3000/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "blue",
+    "email": "blue@example.com",
+    "password": "test123"
+}
+
+### Login 
+POST http://localhost:3000/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "nonAdmin",
+    "password": "sniperking"
+}
+
+
+### Change value
+PUT http://localhost:3000/api/users/61a25a21b9d699f3dc70a129 HTTP/1.1
+content-type: application/json
+token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI1YTIxYjlkNjk5ZjNkYzcwYTEyOSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODAzMDYxNywiZXhwIjoxNjM4Mjg5ODE3fQ.xhIN6mvgY6u69CuSX_kfQjO3ybZi-MseqR45pNUPqrU"
+
+{
+    "username": "admin"
+}
+
+
+### FIND USER BY ID
+GET http://localhost:3000/api/users/61a25a21b9d699f3dc70a129 HTTP/1.1
+content-type: application/json
+token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI1YTIxYjlkNjk5ZjNkYzcwYTEyOSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODAzMDA2MiwiZXhwIjoxNjM4Mjg5MjYyfQ.vwK333h_vXq3HgZZNNIpfY7_Z3UKtvr4ygTvDb3L75c"
